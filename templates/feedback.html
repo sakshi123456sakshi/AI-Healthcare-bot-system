@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot - Feedback</title>
+
+    <!-- BOOTSTRAP 5 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f9ff;
+            /* Light blue healthcare theme */
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .navbar {
+            background-color: #333;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .navbar a {
+            display: flex;
+            align-items: center;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        
+        .navbar a i {
+            margin-right: 8px;
+            /* Space between icon and text */
+        }
+        
+        #form-section {
+            max-width: 600px;
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+        }
+        
+        .h1-tag {
+            color: #0d6efd;
+            /* Bootstrap primary color */
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: #0d6efd;
+            /* Custom healthcare blue */
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">
+            <i class="fas fa-home"></i> Home
+        </a>
+        <a href="{{ url_for('aboutus') }}">About Us</a>
+        <a href="{{ url_for('contactus') }}">Contact Us</a>
+        <a href="{{ url_for('feedback') }}">Feedback</a>
+    </div>
+
+    <section id="form-section">
+        <h1 class="h1-tag">
+            <i class="bi bi-chat-left-heart"></i> We Value Your Feedback
+        </h1>
+        <p class="text-center text-muted">Help us improve our Healthcare Chatbot experience!</p>
+
+        <form name="submit-to-google-sheet">
+            <div class="mb-3">
+                <label for="name" class="form-label"><i class="bi bi-person"></i> Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"><i class="bi bi-envelope"></i> Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                <small class="text-muted">We'll never share your email with anyone.</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="rating" class="form-label"><i class="bi bi-star-fill"></i> Rate Our Chatbot</label>
+                <select class="form-select" id="rating" name="rating" required>
+                    <option value="" disabled selected>Choose a rating</option>
+                    <option value="5">⭐️⭐️⭐️⭐️⭐️ Excellent</option>
+                    <option value="4">⭐️⭐️⭐️⭐️ Good</option>
+                    <option value="3">⭐️⭐️⭐️ Average</option>
+                    <option value="2">⭐️⭐️ Needs Improvement</option>
+                    <option value="1">⭐️ Poor</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="feedback" class="form-label"><i class="bi bi-chat-text"></i> How was your chatbot experience?</label>
+                <textarea class="form-control" id="feedback" name="feedback" rows="3" placeholder="Share your thoughts..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100"><i class="bi bi-send"></i> Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxBEaoPo1wCnkOf8sXJ9fR8F331L0ke00a3wjIk-hvTRie3KuZEmkoF-fkIJPO3mdWK6Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
