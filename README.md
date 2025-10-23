@@ -55,7 +55,7 @@ python train_model.py
 - You’ll see a message like:
    Running on http://127.0.0.1:5000/
 ------------------------
-📁 **Folder Structure**
+📁 **Folder Structure** <br>
 chat/
 │
 ├── app.py                     # Main Flask application <br>
@@ -97,6 +97,6 @@ chat/
 ---------------------------------------------------------
 
 👩‍💻 **Author**
-Sakshi Bhagayt<br>
+Sakshi Bhagat<br>
 [GitHub Link](https://github.com/sakshi123456sakshi)
 
