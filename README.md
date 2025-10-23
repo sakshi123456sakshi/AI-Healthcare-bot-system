@@ -10,14 +10,14 @@ The system integrates a machine learning model to predict possible diseases base
 -----------------------------
 🧠 **Features**
 
------------------
-✅ **AI Chatbot Interface** – Chat with an intelligent assistant to get instant health guidance.
-✅ **Disease Prediction** – Predicts possible illnesses using trained ML models.
-✅ **Diet & Workout Plans** – Suggests healthy routines and exercises for recovery.
-✅ **Medication Information** – Displays medicines and usage details.
-✅ **Precautions & Tips** – Shares do’s and don’ts based on predicted diseases.
-✅ **User Authentication** – Login and registration functionality for personalization.
-✅ **Admin/Doctor Module** (Optional) – For data management and tracking.
+
+✅ **AI Chatbot Interface** – Chat with an intelligent assistant to get instant health guidance.<br>
+✅ **Disease Prediction** – Predicts possible illnesses using trained ML models.<br>
+✅ **Diet & Workout Plans** – Suggests healthy routines and exercises for recovery.<br>
+✅ **Medication Information** – Displays medicines and usage details.<br>
+✅ **Precautions & Tips** – Shares do’s and don’ts based on predicted diseases.<br>
+✅ **User Authentication** – Login and registration functionality for personalization.<br>
+✅ **Admin/Doctor Module** (Optional) – For data management and tracking.<br>
 
 --------------------------
 
@@ -34,7 +34,7 @@ cd ai-healthcare-bot-system/chat
 **Step 3: Create a Virtual Environment**
 python -m venv venv
 venv\Scripts\activate       # For Windows
-# or
+or
 source venv/bin/activate    # For macOS/Linux
 
 **Step 4: Install Dependencies**
@@ -58,45 +58,45 @@ python train_model.py
 📁 **Folder Structure**
 chat/
 │
-├── app.py                     # Main Flask application
-├── chatbot.sql                # MySQL database
-├── train_model.py             # ML training script
-├── predict.py                 # Disease prediction logic
-├── data_preprocessing.py      # Data cleaning and encoding
+├── app.py                     # Main Flask application <br>
+├── chatbot.sql                # MySQL database<br>
+├── train_model.py             # ML training script<br>
+├── predict.py                 # Disease prediction logic<br>
+├── data_preprocessing.py      # Data cleaning and encoding<br>
 │
-├── static/                    # CSS, JS, and images
-│   ├── feedback.css
-│   ├── style.css
-│   ├── script.js
-│   ├── voice.js
-│   └── images/
+├── static/                    # CSS, JS, and images<br>
+│   ├── feedback.css<br>
+│   ├── style.css<br>
+│   ├── script.js<br>
+│   ├── voice.js<br>
+│   └── images/<br>
 │
-├── templates/                 # Frontend HTML pages
-│   ├── index.html
-│   ├── aboutus.html
-│   ├── contactus.html
-│   ├── feedback.html
-│   ├── loginuser.html
-│   ├── Lab.html
-│   ├── reg.php
-│   └── connection.php
+├── templates/                 # Frontend HTML pages<br>
+│   ├── index.html<br>
+│   ├── aboutus.html<br>
+│   ├── contactus.html<br>
+│   ├── feedback.html<br>
+│   ├── loginuser.html<br>
+│   ├── Lab.html<br>
+│   ├── reg.php<br>
+│   └── connection.php<br>
 │
-├── datasets & models:
-│   ├── description.csv
-│   ├── diets.csv
-│   ├── workout_df.csv
-│   ├── medications.csv
-│   ├── precautions_df.csv
-│   ├── Training.csv
-│   ├── disease_prediction_model.pkl
-│   ├── feature_names.pkl
-│   └── label_encoder.pkl
+├── datasets & models:<br>
+│   ├── description.csv<br>
+│   ├── diets.csv<br>
+│   ├── workout_df.csv<br>
+│   ├── medications.csv<br>
+│   ├── precautions_df.csv<br>
+│   ├── Training.csv<br>
+│   ├── disease_prediction_model.pkl<br>
+│   ├── feature_names.pkl<br>
+│   └── label_encoder.pkl<br>
 │
-└── README.md                  # Documentation file
+└── README.md                  # Documentation file<br>
 
 ---------------------------------------------------------
 
 👩‍💻 **Author**
-Sakshi BHAGAT
+Sakshi Bhagayt<br>
 [GitHub Link](https://github.com/sakshi123456sakshi)
 
