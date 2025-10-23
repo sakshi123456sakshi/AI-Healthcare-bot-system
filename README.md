@@ -25,7 +25,7 @@ The system integrates a machine learning model to predict possible diseases base
 Follow these steps to set up and run the project on your system:
 
 **Step 1: Clone or Download the Project**
-git clone https://github.com/yourusername/ai-healthcare-bot-system.git
+git clone [https://github.com/sakshi123456sakshi/AI-Healthcare-bot-system.git]
 Or download the ZIP file and extract it.
 
 **Step 2: Navigate to the Project Folder**
@@ -56,8 +56,8 @@ python train_model.py
    Running on http://127.0.0.1:5000/
 ------------------------
 📁 **Folder Structure** <br>
-chat/
-│
+chat/<br>
+│<br>
 ├── app.py                     # Main Flask application <br>
 ├── chatbot.sql                # MySQL database<br>
 ├── train_model.py             # ML training script<br>
